@@ -1,96 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="main.css">
-    
-    <title>Portfolio with Bootstrap 5</title>
-    <style>
-      .custom-bg {
-      background-color: #ced4da; /* Warna abu-abu */
-      padding: 3rem; /* Padding sekitar elemen */
-      border-radius: 0.5rem; /* Sudut yang membulat */
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="main.css">
+
+  <title>Portfolio with Bootstrap 5</title>
+  <style>
+    .custom-bg {
+      background-color: #ced4da;
+      padding: 3rem;
+      border-radius: 0.5rem;
     }
+
     .accordion-button {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-        }
-    </style>
-    <script src="bootstrap.bundle.min.js"></script>
-  </head>
-  <body>
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
-      <div class="container-fluid" >
-        <a class="navbar-brand" href="#">My Portofolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+    .portfolio-title {
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .portfolio-title::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 2px;
+      background: black;
+      margin: 20px auto 0 auto;
+    }
+
+    .form-title {
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .form-title::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 2px;
+      background: black;
+      margin: 20px auto 0 auto;
+    }
+  </style>
+  <script src="bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">My Portofolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">My Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12 text-center custom-bg">
+        <img src="../src/img/foto2.jpeg" class="rounded-circle mx-auto d-block w-25" alt="...">
+        <h1 class="display-6">Muhammad Fahreza</h1>
+        <p class="lead">College Student | Web Developer | Gamers</p>
+        <hr class="my-4">
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item text-center">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed text-center fs-5" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          About
         </button>
-        <div class="collapse navbar-collapse" id="navbarText" >
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">My Project</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-12 text-center custom-bg">
-          <img src="../src/img/foto2.jpeg" class="rounded-circle mx-auto d-block w-25" alt="...">
-          <h1 class="display-6">Muhammad Fahreza</h1>
-          <p class="lead">College Student | Web Developer | Gamers</p>
-          <hr class="my-4">
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+          <code>.accordion-flush</code> class. This is the first item's accordion body.
         </div>
       </div>
     </div>
-
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-      <div class="accordion-item text-center">
-          <h2 class="accordion-header">
-              <button class="accordion-button collapsed text-center fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                  About
-              </button>
-          </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-          </div>
+    <div class="accordion-item text-center">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed text-center fs-5" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          Pengalaman
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the
+          <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled
+          with some actual content.
+        </div>
       </div>
-      <div class="accordion-item text-center">
-          <h2 class="accordion-header">
-              <button class="accordion-button collapsed text-center fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Pengalaman
-              </button>
-          </h2>
-          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-          </div>
-      </div>
-  </div>
-
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
 
-  </body>
+  <div class="container">
+    <h2 class="portfolio-title text-center">My Project</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-4 d-flex justify-content-center mb-4">
+        <div class="card" style="width: 18rem;">
+          <img src="../src/img/game.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center mb-4">
+        <div class="card" style="width: 18rem;">
+          <img src="../src/img/aplikasiandroid.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-flex justify-content-center mb-4">
+        <div class="card" style="width: 18rem;">
+          <img src="../src/img/web.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="form-title text-center">Contact</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Nama</label>
+        <input type="text" class="form-control" id="name" placeholder="masukkan nama">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="masukkan email">
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">No Telepon</label>
+        <input type="tel" class="form-control" id="phone" placeholder="masukkan no telepon">
+      </div>
+      <div class="mb-3">
+        <label for="subject" class="form-label">Subject</label>
+        <select class="form-select" id="subject">
+          <option selected>Web Development</option>
+          <option value="1">Mobile Development</option>
+          <option value="2">Game Development</option>
+          <option value="3">Others</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Pesan</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="masukkan pesan"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+    </form>
+  </div>
+  
+</body>
+
 </html>
-
-
-
-
