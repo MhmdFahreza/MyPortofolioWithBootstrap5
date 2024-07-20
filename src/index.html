@@ -8,13 +8,23 @@
     <link rel="stylesheet" href="main.css">
     
     <title>Portfolio with Bootstrap 5</title>
-
+    <style>
+      .custom-bg {
+      background-color: #ced4da; /* Warna abu-abu */
+      padding: 3rem; /* Padding sekitar elemen */
+      border-radius: 0.5rem; /* Sudut yang membulat */
+    }
+    .accordion-button {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+    </style>
     <script src="bootstrap.bundle.min.js"></script>
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
+      <div class="container-fluid" >
         <a class="navbar-brand" href="#">My Portofolio</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -37,7 +47,7 @@
 
     <div class="container py-5">
       <div class="row">
-        <div class="col-12 text-center bg-light p-5 rounded">
+        <div class="col-12 text-center custom-bg">
           <img src="../src/img/foto2.jpeg" class="rounded-circle mx-auto d-block w-25" alt="...">
           <h1 class="display-6">Muhammad Fahreza</h1>
           <p class="lead">College Student | Web Developer | Gamers</p>
@@ -45,6 +55,38 @@
         </div>
       </div>
     </div>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item text-center">
+          <h2 class="accordion-header">
+              <button class="accordion-button collapsed text-center fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  About
+              </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+          </div>
+      </div>
+      <div class="accordion-item text-center">
+          <h2 class="accordion-header">
+              <button class="accordion-button collapsed text-center fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Pengalaman
+              </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+          </div>
+      </div>
+  </div>
+
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
 
   </body>
 </html>
